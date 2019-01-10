@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="163.0" prefWidth="391.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane prefHeight="163.0" prefWidth="391.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DepartmentFormController">
    <children>
       <GridPane prefHeight="178.0" prefWidth="400.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -27,17 +26,17 @@
          <children>
             <Label text="Id:" />
             <Label text="Name:" GridPane.rowIndex="1" />
-            <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="80.0" GridPane.columnIndex="1" />
-            <TextField prefHeight="21.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="asdasda" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <TextField fx:id="textFieldId" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="80.0" GridPane.columnIndex="1" />
+            <TextField fx:id="textFieldName" prefHeight="21.0" prefWidth="355.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="labelErrorName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" />
                </GridPane.margin>
             </Label>
             <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="261.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="24.0" prefWidth="93.0" text="Save" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Cancel" />
+                  <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#onButtonSaveAction" prefHeight="24.0" prefWidth="93.0" text="Save" />
+                  <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#onButtonCancelAction" prefHeight="25.0" prefWidth="96.0" text="Cancel" />
                </children>
                <padding>
                   <Insets top="5.0" />

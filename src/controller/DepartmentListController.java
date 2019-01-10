@@ -1,11 +1,9 @@
-package gui;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-
-import com.mysql.jdbc.Util;
 
 import application.Main;
 import gui.util.Alerts;
