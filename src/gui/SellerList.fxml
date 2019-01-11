@@ -31,8 +31,8 @@
             <TableColumn fx:id="tableColumnEmail" prefWidth="81.0" text="Email" />
             <TableColumn fx:id="tableColumnBirthDate" prefWidth="69.0" text="Birth Date" />
             <TableColumn fx:id="tableColumnBaseSalary" prefWidth="81.0" text="Base Salary" />
-            <TableColumn fx:id="tableColumnDepartmentId" prefWidth="89.0" text="Department" />
-            <TableColumn prefWidth="55.0" text="Edit" />
+            <TableColumn fx:id="tableColumnDepartmentId" prefWidth="95.0" text="DepartmentId" />
+            <TableColumn prefWidth="49.0" text="Edit" />
             <TableColumn prefWidth="75.0" text="Remove" />
         </columns>
       </TableView>

@@ -150,7 +150,7 @@ public class SellerDaoJDBC implements SellerDao {
 					"SELECT seller.*,department.Name as DepName " + 
 					"FROM seller INNER JOIN department " + 
 					"ON seller.DepartmentId = department.Id " + 
-					"ORDER BY Name"
+					"ORDER BY Id"
 					);
 			
 			resultSet = preparedStatement.executeQuery();
@@ -161,14 +161,14 @@ public class SellerDaoJDBC implements SellerDao {
 			// As long as there is registration in the database
 			while(resultSet.next()) {
 				
-				Department department2 = map.get(resultSet.getInt("DepartmentId"));
+				Department department= map.get(resultSet.getInt("DepartmentId"));
 				
-				if (department2 == null) {
-					department2 = instantiateDepartment(resultSet);
-					map.put(resultSet.getInt("DepartmentId"), department2);
+				if (department == null) {
+					department = instantiateDepartment(resultSet);
+					map.put(resultSet.getInt("DepartmentId"), department);
 				}
 				
-				Seller seller = instantiateSeller(resultSet, department2);
+				Seller seller = instantiateSeller(resultSet, department);
 				list.add(seller);
 			}
 			return list;
